@@ -2,7 +2,11 @@ package com.jinzo.mirage;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.net.Uri;
+import android.content.Intent;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +21,16 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        ImageView gitHubRepo = findViewById(R.id.githubIcon);
+
+        gitHubRepo.setOnClickListener(v -> {
+                    String githubRepoUrl = "https://github.com/JinzoTun/Mirage";
+                    Uri uri = Uri.parse(githubRepoUrl);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+                );
 
         mAuth = FirebaseAuth.getInstance();
 
