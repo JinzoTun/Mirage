@@ -3,26 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:drawable/btn_default"
-    android:backgroundTint="#EAEAEA"
-    tools:context=".MainActivity">
+    android:backgroundTint="#EAEAEA">
 
     <Button
-        android:id="@+id/bt_signup"
+        android:id="@+id/buttonLogin"
         android:layout_width="322dp"
         android:layout_height="60dp"
-        android:text="@string/signup"
+        android:text="@string/login"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psw"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLogin"
         app:layout_constraintVertical_bias="0.193"
-        tools:ignore="VisualLintButtonSize" />
+        tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/containerbox2"
@@ -40,8 +38,10 @@
         app:layout_constraintVertical_bias="0.567"
         tools:ignore="VisualLintButtonSize,VisualLintOverlap,SpeakableTextPresentCheck" />
 
+    <!-- Add more components here -->
+
     <Button
-        android:id="@+id/containerbox3"
+        android:id="@+id/containerbox"
         android:layout_width="321dp"
         android:layout_height="60dp"
         android:layout_marginBottom="119dp"
@@ -52,11 +52,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711"
+        app:layout_constraintVertical_bias="0.715"
         tools:ignore="VisualLintButtonSize,VisualLintOverlap,SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/mail"
+        android:id="@+id/editTextEmailLogin"
         android:layout_width="318dp"
         android:layout_height="53dp"
         android:layout_marginStart="115dp"
@@ -66,7 +66,7 @@
         android:background="#00FFFFFF"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
-        android:hint="@string/login"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColor="#000000"
@@ -79,7 +79,7 @@
         tools:ignore="LabelFor,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/psw"
+        android:id="@+id/editTextPasswordLogin"
         android:layout_width="316dp"
         android:layout_height="51dp"
         android:layout_marginStart="15dp"
@@ -99,24 +99,13 @@
         app:layout_constraintVertical_bias="0.603"
         tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/authTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_signup"
-        app:layout_constraintVertical_bias="0.071" />
+    <!-- Add more components here -->
 
     <TextView
         android:id="@+id/noAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/old_user"
+        android:text="@string/new_user"
         android:textColor="#546E7A"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,12 +116,26 @@
         app:layout_constraintVertical_bias="0.885" />
 
     <TextView
-        android:id="@+id/signupTxt"
+        android:id="@+id/forgetpsw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textColor="#546E7A"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <TextView
+        android:id="@+id/buttonSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:contextClickable="true"
-        android:text="@string/login"
+        android:text="@string/sign_up"
         android:textColor="#673AB7"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -147,7 +150,7 @@
         android:id="@+id/headTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup"
+        android:text="@string/login"
         android:textColor="#595959"
         android:textSize="34sp"
         android:textStyle="bold"
