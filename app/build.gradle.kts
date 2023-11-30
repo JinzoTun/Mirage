@@ -34,9 +34,6 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
     implementation("com.google.firebase:firebase-analytics")
 
-    implementation("com.google.firebase:firebase-database")
-    implementation ("com.squareup.picasso:picasso:2.71828")
-
 
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
